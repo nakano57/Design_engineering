@@ -34,7 +34,7 @@ print(EU)
 print()
 
 # print(np.max(EU, axis=2))
-EU_max = np.max(np.dot(pz, np.max(EU, axis=2).T), axis=1)
+EU_max = np.diag(np.dot(pz, np.max(EU, axis=2).T))
 EU_max_b = np.max(np.dot(sp, bh.T), axis=1)
 print('max(EU) = ')
 print(EU_max)
